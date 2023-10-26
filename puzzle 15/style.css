@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'round';
+    src: url(GothamRounded-Bold.otf);
+}
+
+:root {
+    --BG: #1c0707;
+    --tile: #e3ff46;
+    --foreground: #ff9900;
+}
+* {
+    color: var(--foreground);
+    font-size: 5vh;
+    font-family: 'round';
+    user-select: none;
+    transition-duration: 150ms;
+}
+body, .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+body {
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+#board, button {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--BG);
+    border: 2vh solid var(--foreground);
+    border-radius: 5vh;
+}
+#board {
+    width: 50vh; height: 50vh;
+}
+button:hover {
+    color: var(--tile);
+    border-color: var(--tile);
+}
+.tile {
+    position: absolute;
+    background-color: var(--tile);
+    width: 12.5vh; height: 12.5vh;
+    box-shadow: inset 0 0 3vh var(--foreground);
+}
+.completed {
+    background-color: brown;
+}
